@@ -31,14 +31,19 @@ mongoose.connect("mongodb+srv://login:loginproject@cluster0.qkj5e.mongodb.net/my
     console.log('MongoDb is connected')
 });
 
+app.use('/static', express.static(path.join(`${__dirname}/client/build`)));
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/client/build`));
+});
+
 // const buildPath = path.join(__dirname, '/client', 'build');
 // app.use(express.static(buildPath));
 
-app.get(express.static(path.join(__dirname, "/client/build")));
+// app.get(express.static(path.join(__dirname, "/client/build")));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+// });
 
 // app.get("/", (req, res) => {
 //     res.status(500).send("Hello World");
