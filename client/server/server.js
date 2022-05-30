@@ -9,6 +9,12 @@ const userRouter = require('./routers/userRouter');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
+
 app.use(express.json())
 // app.use(cors());
 app.use(cookieparser());
@@ -17,10 +23,6 @@ app.use(cookieparser());
 app.use('/api', authRouter);
 app.use('/api', userRouter);
 
-
-app.get('/', (req, res) => {
-    res.send('App is running')
-})
 
 // app.get('*', function(req, res) {
 //     res.sendFile(path.join(__dirname + '/client/public/index.html'));
@@ -43,12 +45,6 @@ mongoose.connect("mongodb+srv://login:loginproject@cluster0.qkj5e.mongodb.net/my
 
 // const buildPath = path.join(__dirname, '/client/build');
 // app.use(express.static(buildPath));
-
-app.use(express.static(path.join(__dirname, "/client/build")));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
 
 // app.get("/", (req, res) => {
 //     res.status(500).send("Hello World");
