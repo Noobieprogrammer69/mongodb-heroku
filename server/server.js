@@ -30,7 +30,7 @@ mongoose.connect("mongodb+srv://login:loginproject@cluster0.qkj5e.mongodb.net/my
     console.log('MongoDb is connected')
 });
 
-const buildPath = path.join(__dirname, '..', 'build');
+const buildPath = path.join(__dirname, '.client', 'build');
 app.use(express.static(buildPath));
 
 // app.get(express.static(path.join(__dirname, "/client/build")));
