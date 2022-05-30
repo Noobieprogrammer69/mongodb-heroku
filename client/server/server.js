@@ -17,19 +17,18 @@ app.use(cookieparser());
 app.use('/api', authRouter);
 app.use('/api', userRouter);
 
-app.use(express.static(path.join(__dirname, "/client/build")));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
-
-
 // app.get('*', function(req, res) {
 //     res.sendFile(path.join(__dirname + '/client/public/index.html'));
 // });
 
 const port = process.env.PORT || 5000;
 // const URL = process.env.MONGO_URI;
+
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
 
 mongoose.connect("mongodb+srv://login:loginproject@cluster0.qkj5e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
