@@ -9,7 +9,7 @@ const userRouter = require('./routers/userRouter');
 const app = express();
 
 app.use(express.json())
-app.use(cors());
+// app.use(cors());
 app.use(cookieparser());
 
 app.use('/api', authRouter);
