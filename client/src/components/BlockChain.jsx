@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-import Transactions from './Transactions';
-
 import { shortenAddress } from '../utils/shortenAddress';
 
 import '../styles/Blockchain.css';

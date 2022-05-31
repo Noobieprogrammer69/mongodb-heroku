@@ -13,8 +13,7 @@ const EditProfile = ({user, setOnEdit}) => {
     const initState = {fullName: '', story: '', phone: '', address: ''};
     const [editData, setEditData] = useState(initState);
     const {fullName, story, phone, address} = editData;
-    const [avatar, setAvatar] = useState('');
-
+    
     useEffect(() => {
         setEditData(user)
     }, [user])

@@ -16,6 +16,7 @@ function FetchApi() {
         }
     };
     
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const apiGet = () => {       
         fetch('https://covid-193.p.rapidapi.com/history?country=philippines&day=2022-05-25', options)
         .then(response => response.json())
@@ -28,7 +29,7 @@ function FetchApi() {
         setLoading(true);
         apiGet()
         setLoading(false)
-    }, []);
+    }, [apiGet]);
 
     if(loading) {
         return <p>Loadin...</p>

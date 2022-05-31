@@ -15,6 +15,7 @@ function JapanFetch() {
         }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const japanFetch = () => {
         fetch('https://covid-193.p.rapidapi.com/history?country=japan&day=2022-05-25', japanCases)
         .then(response => response.json())
@@ -27,7 +28,7 @@ function JapanFetch() {
         setLoading(true);
         japanFetch()
         setLoading(false)
-    }, []);
+    }, [japanFetch]);
 
     if(loading) {
         return <p>Loadin...</p>

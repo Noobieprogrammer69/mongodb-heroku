@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import btn from '@alan-ai/alan-sdk-web';
 import wordsToNumbers from 'words-to-numbers';
 
@@ -6,7 +6,6 @@ import '../styles/AlanAi.css';
 
 import useStyles from '../styles.js';
 import NewsCards from './NewsCards/NewsCards';
-import { Typography } from '@material-ui/core';
 
 const alankey = 'f6d183dac41c7023e511e1f176dbc9212e956eca572e1d8b807a3e2338fdd0dc/stage';
 
@@ -15,7 +14,7 @@ const AlanAi = () => {
 
   const [newsArticles, setNewsArticles] = useState([]);
   const [activeArticle, setActiveArticle] = useState(-1);
-  const [isOpen, setIsOpen] = useState(false);
+  const [setIsOpen] = useState(false);
 
   useLayoutEffect(() => {
     function updateScreen(time) {
@@ -46,7 +45,7 @@ const AlanAi = () => {
           });
     }
       requestAnimationFrame(updateScreen);
-  }, [])
+  }, [setIsOpen])
 
   return (
     <div>

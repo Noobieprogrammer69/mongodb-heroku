@@ -1,11 +1,8 @@
 import React from 'react';
 
 import { Grid, Grow, Typography } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 import NewsCard from '../NewsCard/NewsCard.js';
-
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import './styles.css';
 

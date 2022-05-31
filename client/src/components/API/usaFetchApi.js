@@ -8,9 +8,10 @@ function UsaFetch() {
     useEffect(() => {
         setLoading(true);
         usaGet();
-        setLoading(false);
-    }, [])
-
+        setLoading(false);      
+    // eslint-disable-next-line no-use-before-define
+    }, [usaGet])
+    
     const usaCases = {
         method: 'GET',
         headers: {
@@ -19,6 +20,7 @@ function UsaFetch() {
         }
     };
     
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const usaGet = () => {       
         fetch('https://covid-193.p.rapidapi.com/history?country=usa&day=2022-05-25', usaCases)
         .then(response => response.json())
