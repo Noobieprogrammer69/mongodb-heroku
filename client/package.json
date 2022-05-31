@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "proxy": "https://mongodb-newsapi.herokuapp.com/",
   "private": true,
   "engines": {
     "node": "14.x"
