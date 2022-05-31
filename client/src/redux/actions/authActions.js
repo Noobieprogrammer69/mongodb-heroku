@@ -87,8 +87,8 @@ export const refreshToken = () => async( dispatch) => {
 export const register = (data) =>async (dispatch) =>{
     try {
         const check = valid(data)
-        if(check.errLength > 0) {
-            dispatch({type: 'ALERT' , payload : check.errMsg})
+        if(check.errorLength > 0) {
+            dispatch({type: 'ALERT' , payload : check.errorMsg})
         }
         dispatch({type:"ALERT",payload: {loading: true}})
 
