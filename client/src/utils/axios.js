@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const instance = axios.create({
-    baseUrl: 'https://mongodb-newsapi.herokuapp.com'
+export const axiosInstance = axios.create({
+    baseUrl: "https://mongodb-newsapi.herokuapp.com/api/"
 });
-
-export default instance;
