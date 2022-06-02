@@ -9,12 +9,6 @@ const userRouter = require('./routers/userRouter');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "/client/build")));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
-
 app.use(express.json())
 // app.use(cors());
 app.use(cookieparser());
@@ -23,6 +17,11 @@ app.use(cookieparser());
 app.use('/api', authRouter);
 app.use('/api', userRouter);
 
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
 // app.get('*', function(req, res) {
 //     res.sendFile(path.join(__dirname + '/client/public/index.html'));
 // });
