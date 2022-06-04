@@ -9,6 +9,7 @@ import moment from 'moment';
 import '../styles/NewsArticle.css';
 
 const NewsArticle = ({article}) => {
+
   return (
     <div>
       <Link to="/">

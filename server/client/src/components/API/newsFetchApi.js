@@ -5,22 +5,25 @@ import Article from '../Article';
 import './../../styles/NewsArticle.css'
 
 function NewsFetchApi() {
-    const [data, setData] = useState([]);
+    const [newsShitData, setNewsShitData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const getNewsApi = () => {
-        fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=5de26851a94f486fabe82c0e6700a42f')
-        .then(response => response.json())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const newsShitApi = () => {
+        fetch('https://newsdata.io/api/1/news?apikey=pub_79954dc3375e653af4ffe811e319d8d03574&q=news&country=ph&language=en&category=entertainment ')
+        .then((response) => response.json())
         .then((json) => {
-            setData(json);
-        })
-    }
+            console.log(newsShitData)
+            setNewsShitData(json);
+        });
+    };
 
     useEffect(() => {
         setLoading(true);
-        getNewsApi()
-        setLoading(false)
-    }, []);
+        newsShitApi();
+        setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     if(loading) {
         return <p>Loadin...</p>
@@ -28,7 +31,7 @@ function NewsFetchApi() {
 
   return (
     <div className='for-test'>
-        {data.articles?.map((news) => <Article news={news} />)}
+        {newsShitData.results?.map((news, i) => <Article news={news} key={i} />)}
     </div>
   )
 }

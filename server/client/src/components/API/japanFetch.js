@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import JapanFetchApi from '../JapanFetchApi';
 
 import './../../styles/NewsArticle.css';
@@ -17,7 +18,7 @@ function JapanFetch() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const japanFetch = () => {
-        fetch('https://covid-193.p.rapidapi.com/history?country=japan&day=2022-05-25', japanCases)
+        fetch('https://covid-193.p.rapidapi.com/history?country=japan&day=2022-06-04', japanCases)
         .then(response => response.json())
         .then((json) => {
             setJapanData(json);

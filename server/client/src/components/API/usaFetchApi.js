@@ -22,7 +22,7 @@ function UsaFetch() {
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const usaGet = () => {       
-        fetch('https://covid-193.p.rapidapi.com/history?country=usa&day=2022-05-25', usaCases)
+        fetch('https://covid-193.p.rapidapi.com/history?country=usa&day=2022-06-04', usaCases)
         .then(response => response.json())
         .then((json) => {
             setUsaData(json);
