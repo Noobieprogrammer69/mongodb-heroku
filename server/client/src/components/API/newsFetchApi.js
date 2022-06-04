@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Article } from '..';
+import Article from '../Article';
 
 import './../../styles/NewsArticle.css'
 

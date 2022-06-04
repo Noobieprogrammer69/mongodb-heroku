@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-    baseUrl: 'http://localhost:5000'
+    baseUrl: 'https://mongodb-newsapi.herokuapp.com/api/'
 });

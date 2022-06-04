@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JapanFetchApi from '../JapanFetchApi';
 
-import './../../styles/NewsArticle.css'
+import './../../styles/NewsArticle.css';
 
 function JapanFetch() {
     const [japanData, setJapanData] = useState([]);
