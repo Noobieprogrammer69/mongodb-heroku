@@ -45,14 +45,18 @@
 }
 
 .for-test {
-    background: #161623;
+    background: rgba(243, 244, 246, 1);
+}
+
+#dark .for-test {
+    background: rgb(35, 42, 53);
 }
 
 .icon {
     position: relative;
     top: 100px;
     right: 730px;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -64,7 +68,7 @@
 }
 
 .for__categories p {
-    color: white;
+    color: #000;
     text-decoration: none;
 }
 
@@ -78,7 +82,7 @@
 }
 
 .for__categories-usa p{
-    color: white;
+    color: black;
     position: relative;
     top: 160px;
 }
@@ -125,13 +129,11 @@
     }
 
     .for__categories p {
-        color: white;
         position: relative;
         left: -70px;
     }
 
     .for__categories-usa p {
-        color: white;
         position: relative;
         left: -10px;
         top: 140px;

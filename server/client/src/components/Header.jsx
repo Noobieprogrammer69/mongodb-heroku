@@ -16,7 +16,7 @@ import { logout } from '../redux/actions/authActions';
 
 import 'animate.css';
 
-import '../styles/Header.css'
+import '../styles/Header.css';
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);

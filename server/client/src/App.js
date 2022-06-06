@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, createContext, useState } from 'react';
 
 import './App.css';
 import './index.css';
@@ -12,16 +12,25 @@ import { refreshToken } from './redux/actions/authActions';
 import { FetchApi, UsaFetch, NewsFetchApi, JapanFetch } from './components/API/index';
 import PrivateProfile from './utils/PrivateRouter';
 
+export const ThemeContext = createContext(null);
+
 function App() {
   const { auth } = useSelector(state => state);
   const dispatch = useDispatch();
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     dispatch(refreshToken())
   }, [dispatch]);
 
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark": "light"));
+}
+
   return (
-    <div className='App'>
+  <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <input className='for__dark' type="checkbox" onChange={toggleTheme} checked={theme === "dark"} />
+    <div className='App' id={theme}>
       <Router>
         {auth.token && <Header />}
           <Routes>
@@ -38,6 +47,7 @@ function App() {
           </Routes>
       </Router>
     </div>
+  </ThemeContext.Provider>
   );
 }
 

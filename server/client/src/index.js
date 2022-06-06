@@ -7,16 +7,15 @@ import DataProvider from './redux/store';
 
 import { TransactionProvider } from './context/TransactionContext';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <TransactionProvider>
-    <React.StrictMode>
-      <DataProvider>
-        <App />
-      </DataProvider>
-    </React.StrictMode>
-  </TransactionProvider>
+    <TransactionProvider>
+      <React.StrictMode>
+        <DataProvider>
+          <App />
+        </DataProvider>
+      </React.StrictMode>
+    </TransactionProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -2,7 +2,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background: #fff;
     width:100vw;
     max-width:100%;
     margin:0 auto;
@@ -12,13 +12,29 @@
     z-index: 4;
 }
 
+#light .nav-container {
+    background: #fff;
+}
+
+#dark .nav-container {
+    background: #282c34;
+}
+
+#dark .nav__logo-title h1 {
+    color: #fff;
+}
+
+#dark .home {
+    color: #fff;
+}
+
 .nav__logo-title h1 {
     display: flex;
     justify-content: start;
     position: relative;
     top: 26px;
     left: 20px;
-    color: white;
+    color: #000;
 }
 
 .nav__contents {
@@ -32,7 +48,7 @@
 }
 
 .home {
-    color: white;
+    color: #000;
 }
 
 .for__avatar {
@@ -48,7 +64,7 @@
 
     .toggleMenu-container {
         display: flex;
-        color: white;
+        color: #000;
         transition: ease-in-out;
         transition-duration: .5s;
     }
@@ -62,11 +78,10 @@
         justify-content: start;
         position: relative;
         width: 50px;
-        color: white;
     }
 
     .toggleMenu__contents-container {
-        background: linear-gradient(to right, #0d0931, #302b63, #3f3f6d);
+        background: rgb(114, 108, 108);
         justify-content: center;
         align-items: center;
         display: flex;

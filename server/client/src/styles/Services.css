@@ -1,11 +1,19 @@
 .services__container {
     position: relative;
     top: 650px;
-    background: #161623;
 }
 
-.services__title {
-    font-size: 30px;
+#dark .services__container {
+    background: rgb(35, 42, 53);
+}
+
+.services__title h1 {
+    font-size: 60px;
+    color: #000;
+}
+
+#dark .services__title h1 {
+    color: #fff;
 }
 
 .services__contents {
@@ -25,7 +33,11 @@
     position: relative;
     bottom: 150px;
     left: 400px;
-    color: white;
+    color: #000;
+}
+
+#dark .services__contents p {
+    color: #fff;
 }
 
 .services__news img {
@@ -41,7 +53,11 @@
     position: absolute;
     bottom: 450px;
     left: 1000px;
-    color: white;
+    color: #000;
+}
+
+#dark .services__news p {
+    color: #fff;
 }
 
 .services__blockchain img {
@@ -56,16 +72,20 @@
 
 .services__blockchain p {
     position: relative;
-    color: white;
+    color: #000;
     bottom: 130px;
     right: 110px;
+}
+
+#dark .services__blockchain p {
+    color: #fff;
 }
 
 @media screen and (max-width: 390px) {
     .services__container {
         position: relative;
         top: 650px;
-        background: #161623;
+        background: rgba(243, 244, 246, 1);
     }
     
     .services__title {
@@ -101,7 +121,7 @@
         font-size: 13px;
         left: 60px;
         bottom: -2px;
-        color: white;
+        color: #000;
     }
 
     .services__news {
@@ -131,7 +151,7 @@
         font-size: 13px;
         bottom: 0px;
         left: 60px;
-        color: white;
+        color: #000;
     }
 
     .services__blockchain {
@@ -181,6 +201,6 @@
         align-items: center;
         justify-content: center;
         font-size: 13px;
-        color: white;
+        color: #000;
     }
 }

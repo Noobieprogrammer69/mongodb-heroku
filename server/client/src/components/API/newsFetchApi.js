@@ -13,7 +13,6 @@ function NewsFetchApi() {
         fetch('https://newsdata.io/api/1/news?apikey=pub_79954dc3375e653af4ffe811e319d8d03574&q=news&country=ph&language=en&category=entertainment ')
         .then((response) => response.json())
         .then((json) => {
-            console.log(newsShitData)
             setNewsShitData(json);
         });
     };

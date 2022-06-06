@@ -1,6 +1,7 @@
 .container {
     color: black;
-    background: #161623;
+    /* background: rgb(187, 187, 187); */
+    background: rgba(243, 244, 246, 1);
     min-height: 80vh;
     flex-wrap: wrap;
     z-index: 1;
@@ -46,14 +47,22 @@
 
 .container .card .content h3 {
     font-size: 1.8em;
-    color: #fff;
+    color: #000;
     z-index: 1;
+}
+
+#dark .container .card .content h3 {
+    color: #fff;
 }
 
 .container .card .content p {
     font-size: 1em;
-    color: #fff;
+    color: #000;
     font-weight: 300;
+}
+
+#dark .container .card .content p {
+    color: #fff;
 }
 
 .container .card .content small {
@@ -70,14 +79,29 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.for-title {
+    color: #000;
+}
+
+#dark .for-title {
+    color: #fff;
+}
+
+#dark .container {
+    background: rgb(35, 42, 53);
+}
+
 .serv {
-    background: #161623;
+    background: rgba(243, 244, 246, 1);
+}
+
+#dark .serv {
+    background: rgb(35, 42, 53);
 }
 
 
 @media screen and (max-width: 390px) {
     .serv {
-        background: #161623;
         position: relative;
         left: -0px;
     }

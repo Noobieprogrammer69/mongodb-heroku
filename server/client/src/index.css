@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
+  --text-light: rgba(243, 244, 246, 0.9);
+  --primary-dark: rgba(55, 65, 81, 1);
+
+  background-color: var(--text-light);
 }
 
 code {
@@ -17,3 +21,49 @@ code {
   margin: 0;
   padding: 0;
 }
+
+body.dark {
+  --text-light: rgba(55, 65, 81, 1);
+  --primary-dark: rgba(243, 244, 246, 1);
+}
+
+.for__darkMode {
+  position: relative;
+  top: 100px;
+}
+
+#dark .for__darkMode-positioning  {
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  outline: none;
+  border-radius: 50px;
+  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+  background-size: cover;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+}
+
+input[type="checkbox"]:checked:before {
+  transform: translate(100%);
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked {
+ background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+}
+

@@ -1,8 +1,57 @@
 .App {
   text-align: center;
-  height: 150vh;
-  background: #161623;
+  height: 100%;
+  background: rgba(243, 244, 246, 1);
 }
+
+#light {
+  background: rgba(243, 244, 246, 1);
+}
+
+#dark {
+  background: rgb(35, 42, 53);
+}
+
+#dark .for__darkMode-positioning  {
+  color: #fff;
+}
+
+.for__dark {
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  outline: none;
+  border-radius: 50px;
+  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+  background-size: cover;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+}
+
+input[type="checkbox"]:checked:before {
+  transform: translate(100%);
+}
+
+input[type="checkbox"]:checked {
+ background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+}
+
 
 /* "heroku-postbuild": "cd client && npm install && npm run build" */
 
@@ -10,6 +59,13 @@
 "build": "react-scripts build && (cd server && npm install)",
 "test": "react-scripts test",
 "eject": "react-scripts eject" */
+
+@media screen and (max-width: 390px) {
+  .for__dark {
+    left: 275px;
+    top: 150px;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

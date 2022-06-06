@@ -25,6 +25,10 @@
     position: relative;
     top: 200px;
     right: 230px;
+    color: #000;
+}
+
+#dark .blockchian__title {
     color: white;
 }
 
@@ -34,6 +38,10 @@
     right: 200px;
     text-align: left;
     margin-top: 5px;
+    color: #000;
+}
+
+#dark .blockchain__p {
     color: white;
 }
 
@@ -49,7 +57,7 @@
 }
 
 .connect__p {
-    color: white;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -74,7 +82,7 @@
 }
 
 .blue-glassmorphism {
-    background: rgb(39, 51, 89, 0.4);
+    background: rgba(19, 29, 58, 0.4);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
@@ -203,7 +211,6 @@
         position: relative;
         top: 70px;
         right: -20px;
-        color: white;
     }
     
     .blockchain__p {
@@ -212,17 +219,15 @@
         right: -50px;
         text-align: left;
         margin-top: 5px;
-        color: white;
     }
     
     .connect__button {
         position: relative;
-        right: -170px;
+        right: -115px;
         top: 30px;
     }
     
     .connect__p {
-        color: white;
         cursor: pointer;
     }
 

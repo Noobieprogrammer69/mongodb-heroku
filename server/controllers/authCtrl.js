@@ -13,7 +13,7 @@ const authCtrl = {
             const Email = await Users.findOne({ email: email })
             if(Email) return res.status(400).json({ msg: 'This Email Already Exist.' })
 
-            if(password.length < 8) return res.status(400).json({ msg: 'Password must be atleast 8 Characters.' })
+            if(password.length < 3) return res.status(400).json({ msg: 'Password must be atleast 3 Characters.' })
 
             const passwordHash = await bcrypt.hash(password, 15);
 
@@ -43,7 +43,7 @@ const authCtrl = {
             })
 
         } catch (error) {
-            res.status(500).json({ msg: error.message })
+            return res.status(500).json({ msg: error.message })
         }
     },
     login: async (req, res) => {
@@ -115,7 +115,7 @@ generateAccessToken: async (req, res) => {
             
         })
     } catch (error) {
-        res.stauts(500).json({msg: error.message})
+        return res.stauts(500).json({msg: error.message})
     }
 },
 }

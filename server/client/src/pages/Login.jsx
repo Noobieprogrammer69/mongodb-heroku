@@ -7,6 +7,8 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { login } from '../redux/actions/authActions';
 import { useDispatch } from 'react-redux';
 
+import video from '../images/Tanjiro Dance Of The FireGod 4k 60fps.mp4';
+
 import '../styles/Login.css';
 import { Alert } from '../components';
 
@@ -29,6 +31,14 @@ const Login = () => {
 
   return (
     <section>
+      <video 
+        src={video}
+        type="video/mp4"
+        controls={false}
+        autoPlay 
+        muted 
+        loop
+      />
       <div className='form-container'>
         <h1>Login Form</h1>
         <Alert />
